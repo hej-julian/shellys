@@ -92,7 +92,6 @@ function startReboot() {
     });
 }
 
-
 function waitForInternet() {
     Timer.set(checkInterval, false, function() {
         Shelly.call("HTTP.GET", { url: "https://dns.google", timeout: 3 }, function(result, error_code) {
@@ -107,7 +106,7 @@ function waitForInternet() {
                     startReboot();
                 } else {
                     ledBlue();
-                    waitForInternet(); // erneut prüfen nach Interval
+                    waitForInternet();
                 }
             }
         });
@@ -122,5 +121,4 @@ print("Steckdose eingeschaltet.");
 
 Timer.set(5000, false, checkInternet);
 
-// Danach reguläres Intervall für Internet-Check
 Timer.set(checkInterval, true, checkInternet);
