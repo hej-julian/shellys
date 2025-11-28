@@ -1,3 +1,6 @@
+// Erstellt für Shelly Plug S Gen3
+// (C) Julian
+
 let failCount = 0;
 const maxFails = 3;                // 3 fehlgeschlagene Tests → Neustart
 const checkInterval = 60000;       // alle 60s prüfen
