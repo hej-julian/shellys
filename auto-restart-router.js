@@ -1,7 +1,7 @@
 let failCount = 0;
 const maxFails = 3;                // 3 fehlgeschlagene Tests → Neustart
-const checkInterval = 10000;       // alle 10s prüfen
-const rebootDelay = 30000;         // 30s ausgeschaltet
+const checkInterval = 60000;       // alle 60s prüfen
+const rebootDelay = 60000;         // 60s ausgeschaltet
 const waitTimeout = 300000;        // 5 Minuten maximal auf Internet warten
 
 let rebootInProgress = false;
